@@ -1,0 +1,50 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css"
+    integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg=="
+    crossorigin="anonymous">
+  <title>Optimization comparison</title>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="page-width">
+      <div class="page-width-inner">
+        <div class="logo">
+          <div class="logo__item logo__image lightBlue logoPlaceholder">VARIABLE QUALITIES</div>
+          <div class="logo__item logo__powered">
+            <span class="logo__powered__item logo__powered__text">codepen by</span>
+            <span class="logo__powered__item logo__powered__logo">Bryan Matias</span>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="fold">
+    <div class="page-width">
+      <div class="page-width-inner grid-x grid-margin-x">
+        <div class="large-6 medium-6 small-12">
+          <h1 class="white">Compare Images In Variable Qualities</h1>
+ 
+          <h2 class="subtitle">Devices all render images differently depending on their screen resolution - see the differences in imgix
+            using this variable qualities tester.</h2>
+         <div id="dprContainer" class="dprContainer white italic">*Your device's device pixel resolution is: <span class="yourDpr white"/></span></div>
+          <script>
+            let dpr = window.devicePixelRatio
+            let yourDpr = document.querySelectorAll('.yourDpr');
+            let ele = document.createElement("span");
+            ele.innerHTML = dpr;
+            yourDpr[0].innerHTML = dpr;
+            yourDpr[0].appendchild(ele);
+            console.log(yourDpr);
+          </script>
+        </div>
+        <div class="large-6 medium-6"></div>
+      </div>
+    </div>
+  </section>
+  <div id="app">
+  </div>
+</body>
